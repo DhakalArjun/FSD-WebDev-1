@@ -1,0 +1,103 @@
+<!-- ********************************************** 
+- Developed by: Arjun, Debora & Mackenzie
+- Date: 2023-02-28
+--  *********************************************** -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://github.com/thymeleaf/thymeleaf">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ABC Restaurant</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,900;1,400&family=Roboto:wght@400;900&display=swap" rel="stylesheet"/>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <!-- favicon -->
+    <link rel="icon" th:href="@{/Images/favicon.png}" href="../static/Images/favicon.png" />
+    <!-- style sheets -->
+    <link rel="stylesheet"  th:href="@{/css/styles.css}" href="../static/css/styles.css"/>
+<!--    -->
+  </head>
+  <body>
+    <!-- ============================================================================ Title and Navigation bar -->
+    <header>
+      <nav class="my-navbar-bg navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid my-navbar-header">
+          <a class="navbar-brand" href="#">
+            <div class="neon-wrapper"> <img class="my-logo-icon" th:src="@{/Images/logo.png}" src="../static/Images/logo.png" alt="logo image"/><span class="logo-txt">ABC Restaurant</span></div>
+          </a>
+          <div class="d-flex my-login-flex">
+            <div class="nav-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img id="profile-image" th:src="@{/Images/testimonial3.png}" src="../static/Images/testimonial3.png">
+              </a>
+              <ul class="dropdown-menu my-profile-dropdown-menu-div">
+                <li><a class="dropdown-item" href="#">Dash Board</a></li>
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation" ><span class="navbar-toggler-icon"></span></button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" aria-current="page" th:href="@{/admin}" href="adminHome.html">Admin-Home</a></li>
+              <li class="nav-item"><a class="nav-link  current" th:href="@{/admin/manageProduct}" href="manageProducts.html">Manage Product</a></li>
+              <li class="nav-item"><a class="nav-link" th:href="@{/admin/orders}" href="adminOrders.html">Orders</a></li>
+              <li class="nav-item"><a class="nav-link" th:href="@{/admin/reservation}" href="adminReservation.html">Reservation</a></li>
+              <li class="nav-item"><a class="nav-link" th:href="@{/admin/massages}" href="adminMassages.html">Massages</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ============================================================================ Hero image -->
+    <section id="contact-us-section" class="container-fluid">
+      <div class="container">
+    <h1 class="my-contact-Header">Product List</h1>
+
+      <table class="table" >
+        <thead class="thead-light">
+        <tr>
+          <th scope="col">Product ID</th>
+          <th scope="col">Category</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="category, iStat : ${categories}">
+          <th scope="row" th:text="${iStat.index + 1}">1</th>
+          <td th:text="${category.name}">Larry</td>
+          <td th:text="${category.name}">James</td>
+          <td th:text="${category.name}">James</td>
+          <td><a href="" th:href="@{/admin/categories/delete/{id}(id=${category.id})}" class="btn btn-danger">Delete</a></td>
+          <td><a href="" th:href="@{/admin/categories/update/{id}(id=${category.id})}" class="btn btn-warning">Update</a></td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- ============================================================================ Footer-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

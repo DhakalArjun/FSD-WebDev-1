@@ -1,0 +1,9 @@
+﻿EmpID,EmpFirst,EmpLast,Phone,Email,Title,SIN,DOB,Address,StartDate,EndDate,Salary,user_name,password,otp
+1,Anne,Lessard,5142456789,Anne.Lessard@mail.com,Manager,461-710-883,1978-11-27,6803 90th Ave Montreal QC T6B0P3,2012-03-10,,105000,admin,admin,
+2,Phillip,Starkey,5143946540,Phillip.Starkey@mail.com,Executive Chef,413-632-487,1982-03-24,11122 39th Ave Montreal QC T6J0M3,2017-02-26,,125000,employee2,password2,
+3,Catherine,Adams-Cook,5145436291,Catherine.Adams-Cook@mail.com,Cook,504-019-756,1980-02-01,2248 Tanner Wynd NW Montreal QC T6R2S4,2016-01-02,,50000,employee3,password3,
+4,Juanita,Cortes,5146926042,Juanita.Cortes@mail.com,Cook,602-485-239,1990-09-12,12107 40th St Montreal QC T6H0J4,2015-06-11,,52000,employee4,password4,
+5,Joan,GQCel,5148415793,Joan.GQCel@mail.com,Waiter,366-346-168,1978-08-31,9321 71st Ave NW Montreal QC T6E1Z2,2016-04-29,,125000,employee5,password5,
+6,Karl,Fujikawa,5149905544,Karl.Fujikawa@mail.com,Waiter,409-554-546,1968-03-20,501 10145th 119 St NW Montreal QC T5K1Z2,2000-06-10,,75000,employee6,password6,
+7,Claudio,Montes,5149925295,Claudio.Montes@mail.com,Cashier,522-389-217,2001-04-20,6587 187th St Montreal QC T5T2R7,2016-02-06,2002-12-01,45000,employee7,password7,
+8,Molloy,Krysta,5148422793,Molloy.Krysta@mail.com,Cashier,512-456-020,2002-06-18,501 10145th 119 St NW Montreal QC T5K1Z2,2002-12-01,,46000,employee8,password8,
